@@ -4,21 +4,32 @@
     <title>Words For Music</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/vendor/normalize.css">
+    <link rel="stylesheet" href="/vendor/css/normalize.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
   </head>
   <body>
+      <header>
+        <h1>Words For Music</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Mixtape</li>
+            <li>About Us</li>
+          </ul>
+        </nav>
+      </header>
       <main>
-        <section>
-
+        <section id="search_section">
+          <input type="text" name="Search" placeholder="Put yer lyrics right here" />
+          <button id="search_now" type="submit">Search</button>
         </section>
       </main>
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
       <script type="text/javascript" src="vendor/scripts/handlebars-v4.0.5.js"></script>
       <script type="text/javascript" src="vendor/scripts/page.js"></script>
-      <script type="text/javascript" src="server.js"></script>
+      <script type="text/javascript" src="geniusToken.js"></script>
       <script type="text/javascript" src="scripts/model/model.js"></script>
       <script type="text/javascript" src="scripts/view/view.js"></script>
       <script type="text/javascript" src="scripts/controller/route.js"></script>
