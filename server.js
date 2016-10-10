@@ -7,8 +7,8 @@ var express = require('express'),
 function proxyGenius(request, response) {
   console.log('proxyGenius starting ', request.params);
   (requestProxy({
-    url: 'https://api.genius.com',
-    type: 'GET',
+    url: 'https://api.genius.com/search' + request.params[0],
+    method: 'GET',
     headers: {
       Authorization: 'Bearer ' + process.env.ACCESS_TOKEN,
       'Content-Type': 'application/json'}

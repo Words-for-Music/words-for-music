@@ -1,15 +1,20 @@
-// put this in an IIFE
+(function(module) {
 
-// Make a request to get song data
-var request = function() {
-  $.ajax({
-    url: '/genius/dummyData',
-    method: 'GET'
-  }).done(function(returnedData) {
-    console.log('model.js AJAX request: ', returnedData);
-  }).fail(function(jqxhr, status) {
-    console.log('model.js AJAX request Call failed: ' + status, jqxhr);
-  });
-};
+  var lyrics = {};
 
-request();
+  // Make a request to get song data
+  lyrics.request = function(inputLyrics) {
+    $.ajax({
+      url: 'https://api.genius.com/search?q=' + inputLyrics,
+      method: 'GET',
+      data: 'access_token=' + geniusToken
+    }).done(function(returnedData) {
+      console.log('model.js AJAX request: ', returnedData);
+    }).fail(function(jqxhr, status) {
+      console.log('model.js AJAX request Call failed: ' + status, jqxhr);
+    });
+  };
+
+  module.lyrics = lyrics;
+
+})(window);
