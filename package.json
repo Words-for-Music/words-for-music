@@ -1,0 +1,25 @@
+{
+  "name": "words-for-music",
+  "version": "1.0.0",
+  "description": "Find songs by their lyrics via the Genius API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Words-for-Music/words-for-music.git"
+  },
+  "author": "Tom Timmel, Niilo Smeds, John Gothro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Words-for-Music/words-for-music/issues"
+  },
+  "homepage": "https://github.com/Words-for-Music/words-for-music#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0",
+    "page": "^1.7.1"
+  }
+}
