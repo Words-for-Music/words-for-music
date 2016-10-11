@@ -1,0 +1,12 @@
+header {
+  border: 1px solid red;
+  padding: 0 1em;
+}
+
+nav ul li {
+  padding: 0 0.2em;
+}
+
+nav ul li:hover {
+  background-color: #ddd;
+}

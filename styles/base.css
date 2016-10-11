@@ -1,0 +1,52 @@
+/***** Base Styles *****/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background: #eee;
+  color: #111;
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+main {
+  flex: 1;
+}
+
+header,
+nav,
+button {
+  font-family: 'Lato', sans-serif;
+}
+
+header,
+nav {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul,
+nav ul li {
+  /*border: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+}
