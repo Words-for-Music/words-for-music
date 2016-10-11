@@ -14,16 +14,28 @@
         <h1>Words For Music</h1>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Mixtape</li>
-            <li>About Us</li>
+            <li><a href="/search_section">Home</a></li>
+            <li><a href="/mixtape"> Mixtape</a></li>
+            <li><a href="/about">About Us</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <section id="search_section">
+        <section id="search_section" class="tab-content">
           <input type="text" name="Search" placeholder="Put yer lyrics right here" />
           <button id="search_now" type="submit">Search</button>
+        </section>
+        <section id="mixtape" class="tab-content">
+            <ul>
+              <li>First selection</li>
+            </ul>
+        </section>
+        <section id="about" class="tab-content">
+          <ul>
+            <li>Niilo Smeds</li>
+            <li>John Gothro</li>
+            <li>Tom Timmel</li>
+          </ul>
         </section>
       </main>
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
@@ -32,7 +44,7 @@
       <script type="text/javascript" src="geniusToken.js"></script>
       <script type="text/javascript" src="scripts/model/model.js"></script>
       <script type="text/javascript" src="scripts/view/view.js"></script>
-      <script type="text/javascript" src="scripts/controller/route.js"></script>
       <script type="text/javascript" src="scripts/controller/controller.js"></script>
+      <script type="text/javascript" src="scripts/controller/route.js"></script>
   </body>
 </html>
