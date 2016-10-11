@@ -16,6 +16,7 @@
   // this will render the set of Songs using the template.
   lyricsView.renderSongs = function() {
     // only render if we have songs, otherwise display message.
+    $('#search_section p').empty();
     if (lyrics.allSongs.length){
       $('#song_display').empty()
       .append(lyrics.allSongs.map(songCompiler));

@@ -4,6 +4,7 @@
     <title>Words For Music</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lato" rel="stylesheet">
     <link rel="stylesheet" href="/vendor/css/normalize.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
@@ -23,7 +24,7 @@
   </head>
   <body>
       <header>
-        <h1>Words For Music</h1>
+        <a href="/#"><h1>Words For Music</h1></a>
         <nav>
           <ul>
             <li><a href="/search_section">Home</a></li>
@@ -36,10 +37,12 @@
         <section id="search_section" class="tab-content">
           <input type="text" name="Search" placeholder="Put yer lyrics right here" />
           <button id="search_now" type="submit">Search</button>
-          
-          <section id="song_display">
-          </section>
+          <p>
+            Here's what ya do, see: Type a snippet of lyrics into the search box, then click 'Search' and we'll find songs that include those lyrics!
+          </p>
+        </section>
 
+        <section id="song_display">
         </section>
 
         <section id="mixtape" class="tab-content">
@@ -79,6 +82,12 @@
           </div>
         </section>
       </main>
+      <footer>
+        <ul>
+          <li>Cool huh</li>
+          <li>powered by Tommy's Lil' Sluggers</li>
+        </ul>
+      </footer>
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
       <script type="text/javascript" src="vendor/scripts/handlebars-v4.0.5.js"></script>
       <script type="text/javascript" src="vendor/scripts/page.js"></script>

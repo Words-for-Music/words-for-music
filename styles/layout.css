@@ -1,0 +1,41 @@
+header {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0 0.5em;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+header h1,
+#search_section {
+  text-align: center;
+}
+
+nav ul li {
+  padding: 0 0.2em;
+}
+
+nav ul li:hover {
+  background-color: #eee;
+}
+
+header,
+footer {
+  width: 90vw;
+}
+
+#search_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+footer ul li {
+  font-size: 0.8em;
+}
