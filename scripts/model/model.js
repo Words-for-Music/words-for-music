@@ -4,10 +4,15 @@
 
   lyrics.allSongs = [];
 
+  lyrics.clearSearchResults = function(){
+    // simply clear out any possible existing search results.
+    lyrics.allSongs = [];
+  };
+
   // Make a request to get song data
   lyrics.request = function(inputLyrics, nextFunction) {
     // clear out any prior call data
-    lyrics.allSongs = [];
+    lyrics.clearSearchResults();
     $.ajax({
       url: 'genius/' + inputLyrics
     }).done(function(returnedData) {
