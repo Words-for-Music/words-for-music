@@ -6,8 +6,7 @@ header {
   margin-bottom: 1vh;
 }
 
-header h1,
-#search_section {
+header h1 {
   text-align: center;
 }
 
