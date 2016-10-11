@@ -10,8 +10,7 @@ h1:hover {
   opacity: 0.5;
 }
 
-input,
-#search_section p {
+input, p {
   font-size: 0.8em;
 }
 
@@ -36,31 +35,42 @@ button:active {
   border-color: #fff;
 }
 
-/***** Media Queries *****/ 
+.add-span {
+  margin-left: 2em;
+  font-size: 0.7em;
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+.add-button {
+  font-size: 1em;
+  width: 2em;
+}
+
+/***** Media Queries *****/
 
 @media only screen and (min-width: 480px) {
-  
+
   header,
   footer {
     max-width: 800px;
   }
-  
+
   input {
     max-width: 640px;
   }
-  
+
   h1 {
     font-size: 2.8em;
   }
-  
+
   nav ul {
     justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   main {
     max-width: 640px;
   }
-  
+
 }
