@@ -1,0 +1,66 @@
+h1:before,
+h1:after {
+  content: "\266A";
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  color: red;
+}
+
+h1:hover {
+  opacity: 0.5;
+}
+
+input,
+#search_section p {
+  font-size: 0.8em;
+}
+
+input {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+button {
+  color: inherit;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 0.9em;
+  border: 1px solid #000;
+  width: 5em;
+  margin: 0.5em auto;
+}
+
+button:active {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #fff;
+}
+
+/***** Media Queries *****/ 
+
+@media only screen and (min-width: 480px) {
+  
+  header,
+  footer {
+    max-width: 800px;
+  }
+  
+  input {
+    max-width: 640px;
+  }
+  
+  h1 {
+    font-size: 2.8em;
+  }
+  
+  nav ul {
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  main {
+    max-width: 640px;
+  }
+  
+}

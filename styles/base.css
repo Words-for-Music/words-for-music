@@ -1,0 +1,51 @@
+/***** Base Styles *****/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  color: #111;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  margin: 1em;
+}
+
+#song_display {
+  font-size: 0.9em;
+}
+
+header,
+nav {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul,
+nav ul li {
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}

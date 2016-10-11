@@ -15,6 +15,8 @@
 
   // this will render the set of Songs using the template.
   lyricsView.renderSongs = function() {
+    // Hide the paragraph of instructions, then empty and append the list of search results
+    $('#search_section p').empty();
     $('#song_display').empty()
     .append(lyrics.allSongs.map(songCompiler));
   };
