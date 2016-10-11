@@ -6,6 +6,8 @@
 
   // Make a request to get song data
   lyrics.request = function(inputLyrics, nextFunction) {
+    // clear out any prior call data
+    lyrics.allSongs = [];
     $.ajax({
       url: 'genius/' + inputLyrics
     }).done(function(returnedData) {

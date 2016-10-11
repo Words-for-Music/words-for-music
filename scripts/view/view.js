@@ -6,7 +6,7 @@
   var songCompiler = Handlebars.compile($('#songs-template').text());
 
   // an event handler for search input.
-  $('#search_now').on('submit click', function() {
+  $('#search_now').on('click', function() {
     // call AJAX
     var inputLyrics = $('#search_section input').val();
     inputLyrics = encodeURI(inputLyrics);
@@ -15,12 +15,9 @@
 
   // this will render the set of Songs using the template.
   lyricsView.renderSongs = function() {
-    $('#about ul').empty()
+    $('#song_display').empty()
     .append(lyrics.allSongs.map(songCompiler));
   };
-
-  // // get the data and pass the render function as a callback.
-  // lyricsView.requestRepos(lyricsView.renderSongs);
 
   module.lyricsView = lyricsView;
 
