@@ -2,14 +2,18 @@
 
   var lyrics = {};
 
+  lyrics.allSongs = [];
+
   // Make a request to get song data
-  lyrics.request = function(inputLyrics) {
+  lyrics.request = function(inputLyrics, nextFunction) {
     $.ajax({
-      url: 'https://api.genius.com/search?q=' + inputLyrics,
-      method: 'GET',
-      data: 'access_token=' + geniusToken
+      url: 'genius/' + inputLyrics
     }).done(function(returnedData) {
-      console.log('model.js AJAX request: ', returnedData);
+      returnedData.response.hits.forEach(function(tune) {
+        // get the actual song data searched for
+        return lyrics.allSongs.push(tune.result);
+      });
+      nextFunction();
     }).fail(function(jqxhr, status) {
       console.log('model.js AJAX request Call failed: ' + status, jqxhr);
     });

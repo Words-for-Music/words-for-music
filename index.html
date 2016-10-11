@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="icon" type="image/x-icon" href="images/AutumnLeaves.png">
+    <!-- Handlebar templates -->
+    <script id="songs-template" type="type/x-handlebars-template">
+      <section >
+        <details>
+          <summary><strong>Title:{{full_title}}: Artist:{{artist_name}}</strong></summary>
+          {{#if prjCompletionDt}}
+            <p>Completed on: {{}}, {{}}</p>
+          {{/if}}
+          <div class="song-dtls-wrapper">
+            <img class="song-album-cover" src="{{}}" alt="" />
+            <p class="song-details">{{{}}}</p>
+          </div>
+        </details>
+      </section>
+    </script>
+
   </head>
   <body>
       <header>
