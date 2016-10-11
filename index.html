@@ -26,18 +26,56 @@
         <h1>Words For Music</h1>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Mixtape</li>
-            <li>About Us</li>
+            <li><a href="/search_section">Home</a></li>
+            <li><a href="/mixtape"> Mixtape</a></li>
+            <li><a href="/about">About Us</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <section id="search_section">
+        <section id="search_section" class="tab-content">
           <input type="text" name="Search" placeholder="Put yer lyrics right here" />
           <button id="search_now" type="submit">Search</button>
         </section>
+
         <section id="song_display">
+        </section>
+
+        <section id="mixtape" class="tab-content">
+            <ul>
+              <li>First selection</li>
+            </ul>
+        </section>
+        <section id="about" class="tab-content">
+          <div class="authors">
+            <img src="images/Tom%20Web.jpg"/>
+            <h2>Niilo Smeds</h2>
+            <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <ul class="author-links">
+              <li><a href="" target="_blank">Github</a></li>
+              <li><a href="" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="authors">
+            <img src="images/Tom%20Web.jpg"/>
+            <h2>John Gothro</h2>
+            <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <ul class="author-links">
+              <li><a href="" target="_blank">Github</a></li>
+              <li><a href="" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="authors">
+            <img src="images/Tom%20Web.jpg"/>
+            <h2>Tom Timmel</h2>
+            <p>Tom Timmel is new to the world of coding. He comes from a business management background working mostly in tourism in Alaska. Tom has a Bachelors degree in Business Administration from Bowling Green State University and a Master's degree in Inclusive Education from Nazareth College in Rochester, N.Y. Tom is happiest when he is outdoors during any season hiking, skiing, paddling, or playing Ultimate. Check out the following links for more information.</p>
+            <ul class="author-links">
+              <li><a href="https://github.com/TomTimmel" target="_blank">Github</a></li>
+              <li><a href="https://www.linkedin.com/in/tom-timmel-896263122?trk=nav_responsive_tab_profile" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
         </section>
       </main>
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
@@ -46,7 +84,7 @@
       <script type="text/javascript" src="geniusToken.js"></script>
       <script type="text/javascript" src="scripts/model/model.js"></script>
       <script type="text/javascript" src="scripts/view/view.js"></script>
-      <script type="text/javascript" src="scripts/controller/route.js"></script>
       <script type="text/javascript" src="scripts/controller/controller.js"></script>
+      <script type="text/javascript" src="scripts/controller/route.js"></script>
   </body>
 </html>
