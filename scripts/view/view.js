@@ -15,10 +15,14 @@
 
   // this will render the set of Songs using the template.
   lyricsView.renderSongs = function() {
-    // Hide the paragraph of instructions, then empty and append the list of search results
+    // only render if we have songs, otherwise display message.
     $('#search_section p').empty();
-    $('#song_display').empty()
-    .append(lyrics.allSongs.map(songCompiler));
+    if (lyrics.allSongs.length){
+      $('#song_display').empty()
+      .append(lyrics.allSongs.map(songCompiler));
+    } else {
+      $('#song_display').text('No songs returned from search. Please try again.');
+    };
   };
 
   module.lyricsView = lyricsView;
