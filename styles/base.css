@@ -8,10 +8,12 @@ body {
   background: #eee;
   color: #111;
   font-family: 'Droid Sans Mono', monospace;
+  box-sizing: border-box;
 }
 
 main {
   flex: 1;
+  margin: 1em;
 }
 
 header,

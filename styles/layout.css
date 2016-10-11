@@ -10,3 +10,17 @@ nav ul li {
 nav ul li:hover {
   background-color: #ddd;
 }
+
+header,
+footer {
+  width: 100vw;
+}
+
+footer ul {
+  display: flex;
+  align-content: space-around;
+  margin: 1em;
+}
+
+footer ul li {
+}
