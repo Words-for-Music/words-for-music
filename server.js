@@ -2,10 +2,10 @@
 var express = require('express'),
   requestProxy = require('express-request-proxy'),
   port = process.env.PORT || 3000,
-  app = express();
+  app = express(),
+  superagent = require('superagent');
 
 function proxyGenius(request, response) {
-  console.log('proxyGenius starting ', request.params);
   (requestProxy({
     url: 'https://api.genius.com/search' + request.params[0],
     method: 'GET',
@@ -13,10 +13,23 @@ function proxyGenius(request, response) {
       Authorization: 'Bearer ' + process.env.ACCESS_TOKEN,
       'Content-Type': 'application/json'}
   }))(request, response);
-  // console.log('proxyGenius after proxy call: ', request.url);
 };
 
-app.get('/genius/*', proxyGenius);
+function superagtGenius(request, response){
+  superagent('https://api.genius.com/search?q=' + request.params[0])
+  .set('Authorization', 'Bearer ' + process.env.ACCESS_TOKEN)
+  .end(function(err, res) {
+    if (!err) {
+      console.log('superagtGenius successful: ', res.body);
+      response.json(res.body);
+    } else {
+      console.log('superagtGenius error: ', err);
+    }
+  });
+};
+
+app.get('/genius/*', superagtGenius);
+// app.get('/genius/*', proxyGenius);
 
 app.use(express.static('./'));
 

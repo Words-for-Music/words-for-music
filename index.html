@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="icon" type="image/x-icon" href="images/AutumnLeaves.png">
+    <!-- Handlebar templates -->
+    <script id="songs-template" type="type/x-handlebars-template">
+      <details>
+        <summary><strong>Title:{{title}}  Artist:{{primary_artist.name}}</strong></summary>
+        <div class="song-dtls-wrapper">
+          <img class="song-album-cover" src="{{header_image_url}}" alt="" />
+          <p class="song-details">{{full_title}}</p>
+        </div>
+      </details>
+    </script>
+
   </head>
   <body>
       <header>
@@ -25,6 +37,10 @@
           <input type="text" name="Search" placeholder="Put yer lyrics right here" />
           <button id="search_now" type="submit">Search</button>
         </section>
+
+        <section id="song_display">
+        </section>
+
         <section id="mixtape" class="tab-content">
             <ul>
               <li>First selection</li>
