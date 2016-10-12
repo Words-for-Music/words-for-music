@@ -8,16 +8,19 @@
   // handle a click on the add button
   mixtapeView.addButton = function() {
     $('.add-button').on('click', function() {
-      mixtape.mixList.push($(lyrics.allSongs.full_title));
-      console.log($(mixtape.mixList));
-      mixtapeView.renderMixtape();
+      var songObj = {};
+      songObj.full_title = $(this).data('song');
+      mixtape.mixList.push(songObj);
     });
   };
-
   mixtapeView.renderMixtape = function() {
-    $('#mixtape ul').empty().append(mixtape.mixList.map(mixtapeCompiler));
+    var $theList = $('#mixtape ul');
+    $theList.empty();
+    mixtape.mixList.forEach(function(songItem){
+      $theList.append(mixtapeCompiler(songItem));
+    });
   };
-
+  
   module.mixtapeView = mixtapeView;
 
 })(window);

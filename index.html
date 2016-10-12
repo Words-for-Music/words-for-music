@@ -13,7 +13,7 @@
     <!-- Handlebar templates -->
     <script id="songs-template" type="type/x-handlebars-template">
       <details>
-        <summary><strong>Title:{{title}}  Artist:{{primary_artist.name}}</strong><span class="add-span">add to mixtape <button class="add-button">+</button></span></summary>
+        <summary><strong>Title: {{title}}   by Artist: {{primary_artist.name}}</strong><span class="add-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
           <p class="song-details">{{full_title}}</p>
@@ -22,9 +22,7 @@
     </script>
 
     <script id="mixtape-template" type="type/x-handlebars-template">
-      <details>
-        <summary><strong>{{full_title}}</strong><span class="add-span">remove <button class="minus-button">-</button></span></summary>
-      </details>
+      <li></span><strong>{{full_title}}</strong><span class="add-span">remove <button class="minus-button">-</button></span></li>
     </script>
 
   </head>
