@@ -7,12 +7,10 @@
   musicData.getArtistData = function(renderSongs){
     for(var i = 0; i < lyrics.allSongs.length; i++){
       var endpoint = encodeURI(lyrics.allSongs[i].primary_artist.name + '+' + lyrics.allSongs[i].title + '&limit=1');
-      // console.log(endpoint);
       $.ajax({
         url: 'itunes/' + endpoint
       }).done(function(data){
         var artistData = JSON.parse(data.text);
-        // console.log(artistData);
         musicData.allItunes.push(artistData);
         musicData.useItunesData();
         renderSongs();

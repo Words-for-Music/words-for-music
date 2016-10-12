@@ -14,6 +14,7 @@
     });
   };
 
+  // handle a click on the remove button
   mixtapeView.minusButton = function() {
     $('.minus-button').on('click', function() {
       var $currentSong = $(this).data('song');
@@ -25,10 +26,6 @@
       }
     });
   };
-
-  // handle a click on the remove button
-  // mixtapeView.remove = function() {
-  // };
 
   // render the mixtape list
   mixtapeView.renderMixtape = function() {
