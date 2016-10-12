@@ -13,11 +13,17 @@
     <!-- Handlebar templates -->
     <script id="songs-template" type="type/x-handlebars-template">
       <details>
-        <summary><strong>Title: {{title}}  by Artist: {{primary_artist.name}}</strong></summary>
+        <summary><strong>Title:{{title}}  Artist:{{primary_artist.name}}</strong><span class="add-span">add to mixtape <button class="add-button">+</button></span></summary>
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
           <p class="song-details">{{full_title}}</p>
         </div>
+      </details>
+    </script>
+
+    <script id="mixtape-template" type="type/x-handlebars-template">
+      <details>
+        <summary><strong>{{full_title}}</strong><span class="add-span">remove <button class="minus-button">-</button></span></summary>
       </details>
     </script>
 
@@ -47,7 +53,7 @@
 
         <section id="mixtape" class="tab-content">
             <ul>
-              <li>First selection</li>
+              <p>Here's where your rad mixtape will live! Go ahead and add some songs, ya weirdo!</p>
             </ul>
         </section>
         <section id="about" class="tab-content">
@@ -91,9 +97,11 @@
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
       <script type="text/javascript" src="vendor/scripts/handlebars-v4.0.5.js"></script>
       <script type="text/javascript" src="vendor/scripts/page.js"></script>
-      <script type="text/javascript" src="scripts/model/model.js"></script>
+      <script type="text/javascript" src="scripts/model/songModel.js"></script>
+      <script type="text/javascript" src="scripts/model/mixtapeModel.js"></script>
       <script type="text/javascript" src="scripts/model/modelArtist.js"></script>
-      <script type="text/javascript" src="scripts/view/view.js"></script>
+      <script type="text/javascript" src="scripts/view/mixtapeView.js"></script>
+      <script type="text/javascript" src="scripts/view/songView.js"></script>
       <script type="text/javascript" src="scripts/controller/controller.js"></script>
       <script type="text/javascript" src="scripts/controller/route.js"></script>
   </body>

@@ -24,7 +24,8 @@ footer {
   width: 90vw;
 }
 
-#search_section {
+#search_section,
+#mixtape {
   display: flex;
   flex-direction: column;
   justify-content: center;

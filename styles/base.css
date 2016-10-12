@@ -41,9 +41,11 @@ a:visited {
 
 ul {
   list-style: none;
-  display: flex;
 }
 
+nav ul {
+  display: flex;
+}
 nav ul,
 nav ul li {
   margin: 0;

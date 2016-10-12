@@ -36,6 +36,17 @@ button:active {
   border-color: #fff;
 }
 
+.add-span {
+  margin-left: 2em;
+  font-size: 0.7em;
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+.add-button {
+  font-size: 1em;
+  width: 2em;
+}
+
 #song_display details[open] {
   background-color: #FF6633;
   border: 1px solid #000000;

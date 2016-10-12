@@ -20,7 +20,11 @@
     if (lyrics.allSongs.length){
       $('#song_display').empty()
       .append(lyrics.allSongs.map(songCompiler));
+<<<<<<< HEAD:scripts/view/songView.js
+      mixtapeView.addButton();
+=======
       getArtistData();
+>>>>>>> 8aa19c5d6a168bf40b859345351d0ed90295e0ad:scripts/view/view.js
     } else {
       $('#song_display').text('No songs returned from search. Please try again.');
     };
