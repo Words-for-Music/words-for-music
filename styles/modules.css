@@ -42,7 +42,8 @@ button:active {
   font-family: 'Droid Sans Mono', monospace;
 }
 
-.add-button {
+.add-button,
+.minus-button {
   font-size: 1em;
   width: 2em;
 }
