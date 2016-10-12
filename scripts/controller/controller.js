@@ -11,6 +11,7 @@
 
   mixtapeController.reveal = function() {
     $('.tab-content').hide();
+    mixtapeView.renderMixtape();
     $('#mixtape').fadeIn();
   };
 
