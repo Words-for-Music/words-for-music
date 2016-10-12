@@ -8,7 +8,7 @@
   // handle a click on the add button
   mixtapeView.addButton = function() {
     $('.add-button').on('click', function() {
-      mixtape.mixList.push($(lyrics.allSongs[0]));
+      mixtape.mixList.push($(lyrics.allSongs.full_title));
       console.log($(mixtape.mixList));
       mixtapeView.renderMixtape();
     });
