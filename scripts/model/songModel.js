@@ -10,7 +10,7 @@
   };
 
   // Make a request to get song data
-  lyrics.request = function(inputLyrics, nextFunction) {
+  lyrics.request = function(inputLyrics, getArtistData, renderSongs) {
     // clear out any prior call data
     lyrics.clearSearchResults();
     $.ajax({
@@ -22,8 +22,7 @@
           return lyrics.allSongs.push(tune.result);
         });
       };
-      musicData.getArtistData();
-      nextFunction();
+      getArtistData(renderSongs);
     }).fail(function(jqxhr, status) {
       console.log('model.js AJAX request Call failed: ' + status, jqxhr);
       alert('ERROR in search call.');

@@ -10,7 +10,7 @@
     // call AJAX
     var inputLyrics = $('#search_section input').val();
     inputLyrics = encodeURI(inputLyrics);
-    lyrics.request(inputLyrics, lyricsView.renderSongs);
+    lyrics.request(inputLyrics, musicData.getArtistData, lyricsView.renderSongs);
   });
 
   // this will render the set of Songs using the template.
