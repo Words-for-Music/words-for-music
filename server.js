@@ -32,18 +32,20 @@ app.get('/genius/*', superagtGenius);
 // app.get('/genius/*', proxyGenius);
 
 //function to get Itunes API information
-function superagtGeniusItunes(request, response){
+function superagtItunes(request, response){
+  console.log('superagtItunes start');
   superagent('https://itunes.apple.com/search?term=' + request.params[0])
-  .end(function(err, res){
+  .end(function(err, res) {
     if (!err){
-      console.log('superagtGeniusItunes successful: ', res.body);
+      response.json(res);
+      console.log('superagtItunes successful: ');
     } else {
-      console.log('superagtGeniusItunes error: ', err);
+      console.log('superagtItunes error: ', err);
     }
   });
 };
 
-app.get('/itunes.apple.com', superagtGeniusItunes);
+app.get('/itunes/*', superagtItunes);
 
 app.use(express.static('./'));
 

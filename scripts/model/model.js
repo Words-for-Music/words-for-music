@@ -29,19 +29,6 @@
     });
   };
 
-  var musicData = {};
-
-  musicData.all = [];
-  $.ajax({
-    url: 'https://itunes.apple.com/search?term=' + 'jack+johnson'
-  }).done(function(returnedData){
-    console.log(returnedData);
-
-  }).fail(function(jqxhr, status){
-    console.log('itunes AJAX request Call Failed: ', status, jqxhr);
-  });
-
   module.lyrics = lyrics;
-  module.musicData = musicData;
 
 })(window);
