@@ -20,6 +20,7 @@ nav ul li:hover {
 }
 
 header,
+main,
 footer {
   width: 90vw;
 }
@@ -29,6 +30,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
 }
 
 footer ul {

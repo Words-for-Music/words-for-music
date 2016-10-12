@@ -57,9 +57,29 @@ button:active {
   margin-left: .2em
 }
 
-/***** Media Queries *****/
+.authors img {
+  width: 200px;
+  max-width: 100%;
+}
 
-@media only screen and (min-width: 480px) {
+/***** Media Queries *****/
+@media only screen and (min-width: 617px) {
+  #about {
+    flex-direction: row;
+  }
+
+  .authors {
+    flex: 1;
+    border: 1px solid black;
+    padding: 0.2em;
+  }
+
+  .authors img {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
 
   header,
   footer {
@@ -85,24 +105,17 @@ button:active {
   }
 
   #about {
-    max-width: 800px;
+    max-width: 90vw;
   }
 
   .authors {
     display: inline-block;
     width: 20vw;
     margin-right: 8px;
-}
+  }
 
   .authors img {
-    max-width: 10vw;
+    max-width: 15vw;
   }
 
-  #niilo {
-    float: left;
-  }
-
-  #tom {
-    float: right;
-  }
 }
