@@ -17,8 +17,6 @@
   $('#search_now').on('click', search);
   $('input').keyup(function(e) {
     if(e.keyCode === 13) {
-      // do whatever you want with the value
-      // console.log($(this).val());
       search();
     }
   });
