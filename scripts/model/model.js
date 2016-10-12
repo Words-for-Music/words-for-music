@@ -14,7 +14,7 @@
     // clear out any prior call data
     lyrics.clearSearchResults();
     $.ajax({
-      url: 'genius/' + inputLyrics
+      url: '/genius/' + inputLyrics
     }).done(function(returnedData) {
       if (returnedData.response.hits.length) {
         returnedData.response.hits.forEach(function(tune) {
@@ -28,6 +28,10 @@
       alert('ERROR in search call.');
     });
   };
+
+  var musicData = {};
+  
+
 
   module.lyrics = lyrics;
 
