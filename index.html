@@ -17,8 +17,12 @@
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
           <p class="song-details">{{full_title}}</p>
+          {{#if artistViewUrl}}
           <a href="{{artistViewUrl}}" target="_blank">Artist Data</a>
-          <iframe src="{{previewUrl}}"></iframe>
+          {{/if}}
+          {{#if previewUrl}}
+          <audio src="{{previewUrl}}" controls preload></audio>
+          {{/if}}
         </div>
       </details>
     </script>
