@@ -4,7 +4,7 @@
 
   musicData.allItunes = [];
 
-  musicData.getArtistData = function(){
+  musicData.getArtistData = function(renderSongs){
     for(var i = 0; i < lyrics.allSongs.length; i++){
       var endpoint = encodeURI(lyrics.allSongs[i].primary_artist.name + '+' + lyrics.allSongs[i].title + '&limit=1');
       // console.log(endpoint);
@@ -15,6 +15,7 @@
         // console.log(artistData);
         musicData.allItunes.push(artistData);
         musicData.useItunesData();
+        renderSongs();
       }).fail(function(jqxhr, status){
         console.log('itunes AJAX request Call Failed: ', status, jqxhr);
       });
