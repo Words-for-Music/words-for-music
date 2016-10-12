@@ -13,7 +13,7 @@
     <!-- Handlebar templates -->
     <script id="songs-template" type="type/x-handlebars-template">
       <details>
-        <summary><strong>Title: {{title}}   by Artist: {{primary_artist.name}}</strong><span class="add-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
+        <summary><strong>Title: {{title}} by Artist: {{primary_artist.name}}</strong><span class="add-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
           <p class="song-details">{{full_title}}</p>
@@ -56,7 +56,7 @@
             </ul>
         </section>
         <section id="about" class="tab-content">
-          <div class="authors">
+          <div class="authors" id="niilo">
             <img src="images/SmilingFace.jpg"/>
             <h2>Niilo Smeds</h2>
             <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -66,18 +66,18 @@
               <li><a href="" target="_blank">LinkedIn</a></li>
             </ul>
           </div>
-          <div class="authors">
+          <div class="authors" id="john">
             <img src="images/SmilingFace.jpg"/>
             <h2>John Gothro</h2>
-            <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <ul class="author-links">
               <li><a href="" target="_blank">Github</a></li>
               <li><a href="" target="_blank">LinkedIn</a></li>
             </ul>
           </div>
-          <div class="authors">
-            <img src="images/SmilingFace.jpg"/>
+          <div class="authors" id="tom">
+            <img src="images/Tom%20Web.jpg"/>
             <h2>Tom Timmel</h2>
             <p>Tom Timmel is new to the world of coding. He comes from a business management background working mostly in tourism in Alaska. Tom has a Bachelors degree in Business Administration from Bowling Green State University and a Master's degree in Inclusive Education from Nazareth College in Rochester, N.Y. Tom is happiest when he is outdoors during any season hiking, skiing, paddling, or playing Ultimate. Check out the following links for more information.</p>
             <ul class="author-links">
@@ -96,11 +96,14 @@
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
       <script type="text/javascript" src="vendor/scripts/handlebars-v4.0.5.js"></script>
       <script type="text/javascript" src="vendor/scripts/page.js"></script>
+      <!-- Model scripts -->
       <script type="text/javascript" src="scripts/model/songModel.js"></script>
       <script type="text/javascript" src="scripts/model/mixtapeModel.js"></script>
       <script type="text/javascript" src="scripts/model/modelArtist.js"></script>
+      <!-- View scripts -->
       <script type="text/javascript" src="scripts/view/mixtapeView.js"></script>
       <script type="text/javascript" src="scripts/view/songView.js"></script>
+      <!-- Controller scripts -->
       <script type="text/javascript" src="scripts/controller/controller.js"></script>
       <script type="text/javascript" src="scripts/controller/route.js"></script>
   </body>
