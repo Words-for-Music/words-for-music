@@ -33,7 +33,7 @@ footer {
 }
 
 #about {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 

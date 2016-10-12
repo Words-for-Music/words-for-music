@@ -19,7 +19,7 @@
 
   aboutController.reveal = function() {
     $('.tab-content').hide();
-    $('#about').fadeIn();
+    $('#about').fadeIn().css('display', 'flex');
   };
 
   module.searchController = searchController;
