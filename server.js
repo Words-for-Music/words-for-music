@@ -5,15 +5,6 @@ var express = require('express'),
   app = express(),
   superagent = require('superagent');
 
-function proxyGenius(request, response) {
-  (requestProxy({
-    url: 'https://api.genius.com/search' + request.params[0],
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + process.env.ACCESS_TOKEN,
-      'Content-Type': 'application/json'}
-  }))(request, response);
-};
 
 function superagtGenius(request, response){
   superagent('https://api.genius.com/search?q=' + request.params[0])
@@ -29,7 +20,6 @@ function superagtGenius(request, response){
 };
 
 app.get('/genius/*', superagtGenius);
-// app.get('/genius/*', proxyGenius);
 
 //function to get Itunes API information
 function superagtItunes(request, response){

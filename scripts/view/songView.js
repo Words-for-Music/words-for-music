@@ -5,12 +5,22 @@
   // Handlebars template call
   var songCompiler = Handlebars.compile($('#songs-template').text());
 
-  // an event handler for search input.
-  $('#search_now').on('click', function() {
+  // Handle search input
+  var search = function() {
     // call AJAX
-    var inputLyrics = $('#search_section input').val();
+    var inputLyrics = $('#search_section input:last-of-type').val();
     inputLyrics = encodeURI(inputLyrics);
     lyrics.request(inputLyrics, musicData.getArtistData, lyricsView.renderSongs);
+  };
+
+  // handle input events if user clicks or presses enter.
+  $('#search_now').on('click', search);
+  $('input').keyup(function(e) {
+    if(e.keyCode === 13) {
+      // do whatever you want with the value
+      // console.log($(this).val());
+      search();
+    }
   });
 
   // this will render the set of Songs using the template.
