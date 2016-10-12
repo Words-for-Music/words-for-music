@@ -10,8 +10,9 @@ h1:hover {
   opacity: 0.5;
 }
 
-input, p {
-  font-size: 0.8em;
+input,
+#search_section p {
+  font-size: 1.0em;
 }
 
 input {
@@ -46,6 +47,16 @@ button:active {
   width: 2em;
 }
 
+#song_display details[open] {
+  background-color: #FF6633;
+  border: 1px solid #000000;
+}
+
+.song-album-cover {
+  max-width: 20vw;
+  margin-left: .2em
+}
+
 /***** Media Queries *****/
 
 @media only screen and (min-width: 480px) {
@@ -73,4 +84,12 @@ button:active {
     max-width: 640px;
   }
 
+  #about {
+    max-width: 800px;
+  }
+
+  .authors {
+    display: inline-block;
+    width: 25vw;
+  }
 }
