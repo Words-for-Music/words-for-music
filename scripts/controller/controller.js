@@ -12,7 +12,7 @@
   mixtapeController.reveal = function() {
     $('.tab-content').hide();
     mixtapeView.renderMixtape();
-    $('#mixtape').fadeIn();
+    $('#mixtape').fadeIn().css('display', 'flex');
   };
 
   var aboutController = {};
