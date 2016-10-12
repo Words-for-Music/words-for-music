@@ -48,7 +48,7 @@ button:active {
 }
 
 #song_display details[open] {
-  background-color: #FF6633;
+  background-color: #FFC105;
   border: 1px solid #000000;
 }
 
@@ -81,7 +81,7 @@ button:active {
   }
 
   main {
-    max-width: 640px;
+    max-width: 800px;
   }
 
   #about {
@@ -90,6 +90,19 @@ button:active {
 
   .authors {
     display: inline-block;
-    width: 25vw;
+    width: 20vw;
+    margin-right: 8px;
+}
+
+  .authors img {
+    max-width: 10vw;
+  }
+
+  #niilo {
+    float: left;
+  }
+
+  #tom {
+    float: right;
   }
 }

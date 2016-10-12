@@ -22,15 +22,13 @@
           return lyrics.allSongs.push(tune.result);
         });
       };
+      musicData.getArtistData();
       nextFunction();
     }).fail(function(jqxhr, status) {
       console.log('model.js AJAX request Call failed: ' + status, jqxhr);
       alert('ERROR in search call.');
     });
   };
-
-  var musicData = {};
-  
 
 
   module.lyrics = lyrics;
