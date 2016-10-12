@@ -20,6 +20,7 @@
     if (lyrics.allSongs.length){
       $('#song_display').empty()
       .append(lyrics.allSongs.map(songCompiler));
+      getArtistData();
     } else {
       $('#song_display').text('No songs returned from search. Please try again.');
     };
