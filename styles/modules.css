@@ -20,6 +20,10 @@ input {
   margin: 0 auto;
 }
 
+#button-div {
+  text-align: center;
+}
+
 button {
   color: inherit;
   background-color: #fff;
@@ -34,6 +38,10 @@ button:active {
   background-color: #ccc;
   color: #fff;
   border-color: #fff;
+}
+
+#reset-button {
+  display: none;
 }
 
 .button-span {
