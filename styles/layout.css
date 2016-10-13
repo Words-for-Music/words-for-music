@@ -32,8 +32,9 @@ footer {
   justify-content: center;
 }
 
+#mixtape,
 #about {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
