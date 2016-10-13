@@ -59,7 +59,6 @@ button:active {
 
 .song-album-cover {
   max-height: 25vw;
-  max-width: 25vw;
   margin-left: .8em;
   margin-top: .8em;
   margin-bottom: .8em;
@@ -166,7 +165,6 @@ a.artist:hover{
   }
   .song-album-cover {
     max-height: 20vw;
-    max-width: 20vw;
   }
   .song-details {
     font-size: 1em;
