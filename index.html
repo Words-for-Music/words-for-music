@@ -16,13 +16,16 @@
         <summary><strong>Title: {{title}}   by Artist: {{primary_artist.name}}</strong><span class="button-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
+          <section class="audio">
+            {{#if previewUrl}}
+            <audio src="{{previewUrl}}" controls preload></audio>
+            {{/if}}
+            <p id="itunes">Provided Courtesy of Itunes</p>
+            {{#if artistViewUrl}}
+            <a href="{{artistViewUrl}}" class="artist" target="_blank">Artist Data</a>
+            {{/if}}
+          </section>
           <p class="song-details">{{full_title}}</p>
-          {{#if artistViewUrl}}
-          <a href="{{artistViewUrl}}" target="_blank">Artist Data</a>
-          {{/if}}
-          {{#if previewUrl}}
-          <audio src="{{previewUrl}}" controls preload></audio>
-          {{/if}}
         </div>
       </details>
     </script>
