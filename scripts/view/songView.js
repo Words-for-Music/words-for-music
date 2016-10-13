@@ -7,6 +7,9 @@
 
   // Handle search input
   var search = function() {
+    // disable search button to prevent multiple clicks while searching
+    document.getElementById('search_now').disabled=true;
+    document.getElementById('search_now').textContent = 'Wait ...';
     // we need to grab the name from input, if entered
     var userName = $('#search_section input:first-of-type').val();
     if (userName) {
@@ -45,6 +48,7 @@
     } else {
       $('#song_display').text('No songs returned from search. Please try again.');
     };
+    $('#search_now').text('Search').prop('disabled', false);
   };
 
   module.lyricsView = lyricsView;
