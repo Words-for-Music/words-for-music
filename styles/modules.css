@@ -52,40 +52,42 @@ button:active {
   background-color: #FFC105;
   border: 1px solid #000000;
 }
+.song-dtls-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .song-album-cover {
+  max-height: 25vw;
   max-width: 25vw;
   margin-left: .8em;
   margin-top: .8em;
+  margin-bottom: .8em;
+}
+.audio {
+  margin-left: .8em;
+  margin-bottom: .8em;
 }
 
-.audio {
-  float:right;
+audio{
+  width: 12em;
 }
 
 #itunes {
   margin-top: 0px;
   font-size: .8em;
-  margin-left: .4em;
-}
-
-.audio audio{
-  margin-top: .8em;
-  margin-right: .8em;
-  display: block;
-  width: 12em;
 }
 
 .artist {
   font-size: 1.5em;
-  margin-top: .8em;
-  margin-right: 1em;
+}
+
+a.artist:hover{
+  cursor: pointer;
 }
 
 .song-details {
   font-size: 2em;
-  margin-left: .8em;
-  margin-top: .8em;
 }
 
 .authors img {
@@ -107,6 +109,17 @@ button:active {
 
   .authors img {
     max-width: 90%;
+  }
+  #itunes {
+    margin-top: 0px;
+  }
+
+  audio{
+    width: 16em;
+  }
+
+  .artist {
+    font-size: 1.5em;
   }
 }
 
@@ -148,5 +161,26 @@ button:active {
   .authors img {
     max-width: 15vw;
   }
+  .audio {
+    margin-left: 2.8em;
+  }
+  .song-album-cover {
+    max-height: 20vw;
+    max-width: 20vw;
+  }
+  .song-details {
+    font-size: 1em;
+  }
 
+  #itunes {
+    margin-top: 0px;
+  }
+
+  audio{
+    width: 21em;
+  }
+
+  .artist {
+    font-size: 1.5em;
+  }
 }
