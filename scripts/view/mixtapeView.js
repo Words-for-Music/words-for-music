@@ -44,6 +44,18 @@
       // Store the playlist data in localStorage
       localStorage.setItem(storeKey, JSON.stringify(mixtape.mixList));
       mixtapeView.retrieveList(event);
+      var overlay = document.createElement('h5');
+      overlay.id = 'overlay';
+      // $('main').append(overlay);
+      $(overlay).hide().appendTo($('main'))
+      .css({'font-size' : '5em',
+            'text-align' : 'center',
+            'position' : 'fixed',
+            'top' : '10%',
+            'left' : '50%',
+            'transform' : 'translate(-50%, -50%)'
+          })
+          .fadeIn(500).text('Playlist Saved!').fadeOut(1000);
     } else {
       alert('Playlists cannot be saved without a name');
     };
@@ -86,8 +98,8 @@
   };
 
   // set Event Handlers.
-  $('.retrieve_playlist').on('click', mixtapeView.retrieveList);
-  $('.save_playlist').on('click', mixtapeView.saveList);
+  $('#retrieve_playlist').on('click', mixtapeView.retrieveList);
+  $('#save_playlist').on('click', mixtapeView.saveList);
 
   module.mixtapeView = mixtapeView;
 
