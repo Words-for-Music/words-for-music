@@ -45,7 +45,7 @@
       localStorage.setItem(storeKey, JSON.stringify(mixtape.mixList));
       mixtapeView.retrieveList(event);
     } else {
-      alert('Playlists cannot be saved with a name');
+      alert('Playlists cannot be saved without a name');
     };
   };
 
@@ -57,7 +57,6 @@
       var storeKey = playlistName.toUpperCase() + '_playlist';
       if (localStorage.getItem(storeKey)) {
         // clear any prior list first.
-        console.log('clearing prior data from list');
         mixtape.mixList = [];
         // Our data is already in localStorage, Retrieve it
         var storedData = JSON.parse(localStorage.getItem(storeKey));
@@ -86,10 +85,7 @@
     mixtapeView.minusButton();
   };
 
-  // mixtapeView.saveList();
-  // mixtapeView.retrieveList();
-
-  // set Event Handler.
+  // set Event Handlers.
   $('.retrieve_playlist').on('click', mixtapeView.retrieveList);
   $('.save_playlist').on('click', mixtapeView.saveList);
 
