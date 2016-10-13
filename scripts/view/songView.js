@@ -13,14 +13,20 @@
     // we need to grab the name from input, if entered
     var userName = $('#search_section input:first-of-type').val();
     if (userName) {
-      var storeKey = userName.toUpperCase() + '_playlist';
-      if (localStorage.storeKey) {
-        // Our data is already in localStorage, Retrieve it
-        var storedData = JSON.parse(localStorage.getItem(storeKey));
-        mixtapeView.loadPlaylist(storedData);
+      if (mixtape.mixList.length === 0) {
+        console.log('mixList has data: ', mixtape.mixList);
+        var storeKey = userName.toUpperCase() + '_playlist';
+        if (localStorage.getItem(storeKey)) {
+          // Our data is already in localStorage, Retrieve it
+          var storedData = JSON.parse(localStorage.getItem(storeKey));
+          // clear prior data from list
+          // console.log('clearing prior data from list');
+          // mixtape.mixList = [];
+          mixtapeView.loadPlaylist(storedData);
+        };
       };
       // also set the input name to the equivalent field on the mixtape view.
-      $('#mixtape input').text(userName);
+      $('#mixtape input').val(userName);
     };
 
     // call AJAX

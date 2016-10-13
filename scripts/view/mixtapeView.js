@@ -10,6 +10,7 @@
     dataPassedIn.forEach(function(ele) {
       mixtape.mixList.push(ele);
     });
+    mixtapeView.renderMixtape();
   };
 
   // handle a click on the add button
@@ -35,18 +36,44 @@
   };
 
   // handle Save click
-  mixtapeView.saveList = function() {
-    $('.save_playlist').on('click', function(event) {
-      event.preventDefault();
-      var userName = $('#mixtape input').val();
-      if (userName) {
-        var storeKey = userName.toUpperCase() + '_playlist';
-        // Store the playlist data in localStorage
-        localStorage.setItem(storeKey, JSON.stringify(mixtape.mixList));
+  mixtapeView.saveList = function(event) {
+    event.preventDefault();
+    var userName = $('#mixtape input').val();
+    if (userName) {
+      var storeKey = userName.toUpperCase() + '_playlist';
+      // Store the playlist data in localStorage
+      localStorage.setItem(storeKey, JSON.stringify(mixtape.mixList));
+      mixtapeView.retrieveList(event);
+    } else {
+      alert('Playlists cannot be saved with a name');
+    };
+  };
+
+  // handle Retrieve Playlist click
+  mixtapeView.retrieveList = function(event) {
+    event.preventDefault();
+    var playlistName = $('#mixtape input').val();
+    if (playlistName) {
+      var storeKey = playlistName.toUpperCase() + '_playlist';
+      if (localStorage.getItem(storeKey)) {
+        // clear any prior list first.
+        console.log('clearing prior data from list');
+        mixtape.mixList = [];
+        // Our data is already in localStorage, Retrieve it
+        var storedData = JSON.parse(localStorage.getItem(storeKey));
+        mixtapeView.loadPlaylist(storedData);
+        loadName(playlistName);
       } else {
-        alert('Playlists cannot be saved with your name');
+        alert('No playlist by that name found');
       };
-    });
+    } else {
+      alert('Playlists cannot be found without a name');
+    };
+  };
+
+  var loadName = function(theName) {
+    // also set the input name to the equivalent field on the mixtape view.
+    $('#search_section input:first-of-type').val(theName);
   };
 
   // render the mixtape list
@@ -59,7 +86,12 @@
     mixtapeView.minusButton();
   };
 
-  mixtapeView.saveList();
+  // mixtapeView.saveList();
+  // mixtapeView.retrieveList();
+
+  // set Event Handler.
+  $('.retrieve_playlist').on('click', mixtapeView.retrieveList);
+  $('.save_playlist').on('click', mixtapeView.saveList);
 
   module.mixtapeView = mixtapeView;
 
