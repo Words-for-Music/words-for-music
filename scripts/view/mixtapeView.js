@@ -40,25 +40,29 @@
     event.preventDefault();
     var userName = $('#mixtape input').val();
     if (userName) {
-      var storeKey = userName.toUpperCase() + '_playlist';
-      // Store the playlist data in localStorage
-      localStorage.setItem(storeKey, JSON.stringify(mixtape.mixList));
-      mixtapeView.retrieveList(event);
-      var overlay = document.createElement('h5');
-      overlay.id = 'overlay';
-      // $('main').append(overlay);
-      $(overlay).hide().appendTo($('main'))
-      .css({'font-size' : '5em',
-            'text-align' : 'center',
-            'position' : 'fixed',
-            'top' : '10%',
-            'left' : '50%',
-            'transform' : 'translate(-50%, -50%)'
-          })
-          .fadeIn(500).text('Playlist Saved!').fadeOut(1000);
+      if (mixtape.mixList.length > 0) {
+        var storeKey = userName.toUpperCase() + '_playlist';
+        // Store the playlist data in localStorage
+        localStorage.setItem(storeKey, JSON.stringify(mixtape.mixList));
+        mixtapeView.retrieveList(event);
+        // Create a nifty 'Playlist Saved' overlay
+        var overlay = document.createElement('h5');
+        overlay.id = 'overlay';
+        $(overlay).hide().appendTo($('main'))
+        .css({'font-size' : '5em',
+              'text-align' : 'center',
+              'position' : 'fixed',
+              'top' : '10%',
+              'left' : '50%',
+              'transform' : 'translate(-50%, -50%)'
+            })
+            .fadeIn(500).text('Playlist Saved!').fadeOut(1000);
+      } else {
+        alert('You don\'t have a playlist to save');
+      };
     } else {
       alert('Playlists cannot be saved without a name');
-    };
+    }
   };
 
   // handle Retrieve Playlist click
