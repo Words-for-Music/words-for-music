@@ -10,11 +10,13 @@
     // we need to grab the name from input, if entered
     var userName = $('#search_section input:first-of-type').val();
     if (userName) {
-      var storeKey = userName.toUpperCase() + '_playlist';
-      if (localStorage.storeKey) {
+      var storeKey = userName.toUpperCase();
+      if (localStorage.playlist.getItem(storeKey)) {
         // Our data is already in localStorage, Retrieve it
+        console.log('playlist is in local storage:', storeKey);
         var storedData = JSON.parse(localStorage.getItem(storeKey));
         mixtapeView.loadPlaylist(storedData);
+        alert('Your playlist is loaded: ' + storeKey);
       };
       // also set the input name to the equivalent field on the mixtape view.
       $('#mixtape input').text(userName);
