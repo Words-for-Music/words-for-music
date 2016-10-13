@@ -14,7 +14,6 @@
     var userName = $('#search_section input:first-of-type').val();
     if (userName) {
       if (mixtape.mixList.length === 0) {
-        console.log('mixList has data: ', mixtape.mixList);
         var storeKey = userName.toUpperCase() + '_playlist';
         if (localStorage.getItem(storeKey)) {
           // Our data is already in localStorage, Retrieve it
