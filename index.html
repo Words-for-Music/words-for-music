@@ -17,15 +17,15 @@
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
           <section class="audio">
+            <p class="song-details">{{full_title}}</p>
             {{#if previewUrl}}
             <audio src="{{previewUrl}}" controls preload></audio>
             {{/if}}
             <p id="itunes">Provided Courtesy of Itunes</p>
             {{#if artistViewUrl}}
-            <a href="{{artistViewUrl}}" class="artist" target="_blank">Artist Data</a>
+            <a href="{{artistViewUrl}}" class="artist" target="_blank">iTunes Artist Bio</a>
             {{/if}}
           </section>
-          <p class="song-details">{{full_title}}</p>
         </div>
       </details>
     </script>
