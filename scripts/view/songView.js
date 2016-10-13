@@ -16,8 +16,6 @@
           // Our data is already in localStorage, Retrieve it
           var storedData = JSON.parse(localStorage.getItem(storeKey));
           // clear prior data from list
-          // console.log('clearing prior data from list');
-          // mixtape.mixList = [];
           mixtapeView.loadPlaylist(storedData);
         };
       };
