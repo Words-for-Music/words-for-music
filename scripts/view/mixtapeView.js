@@ -21,6 +21,7 @@
     });
   };
 
+  // handle a click on the remove button
   mixtapeView.minusButton = function() {
     $('.minus-button').on('click', function() {
       var $currentSong = $(this).data('song');
