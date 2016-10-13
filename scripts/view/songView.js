@@ -49,6 +49,7 @@
     $('#song_display').empty();
     $('input').val('');
     $('#search_now').text('Search').prop('disabled', false);
+    $('#reset-button').css('display', 'none');
   });
 
   // this will render the set of Songs using the template.
@@ -63,6 +64,7 @@
       $('#song_display').text('No songs returned from search. Please try again.');
     };
     $('#search_now').text('Search').prop('disabled', false);
+    $('#reset-button').css('display', 'inline-block');
   };
 
   module.lyricsView = lyricsView;
