@@ -20,6 +20,10 @@ input {
   margin: 0 auto;
 }
 
+#button-div {
+  text-align: center;
+}
+
 button {
   color: inherit;
   background-color: #fff;

@@ -43,6 +43,14 @@
     }
   });
 
+  // handle reset button
+  $('#reset-button').on('click', function() {
+    mixtape.mixList = [];
+    $('#song_display').empty();
+    $('input').val('');
+    $('#search_now').text('Search').prop('disabled', false);
+  });
+
   // this will render the set of Songs using the template.
   lyricsView.renderSongs = function() {
     // only render if we have songs, otherwise display message.
