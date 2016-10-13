@@ -5,7 +5,6 @@ var express = require('express'),
   app = express(),
   superagent = require('superagent');
 
-
 function superagtGenius(request, response){
   superagent('https://api.genius.com/search?q=' + request.params[0])
   .set('Authorization', 'Bearer ' + process.env.ACCESS_TOKEN)

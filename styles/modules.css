@@ -11,7 +11,7 @@ h1:hover {
 }
 
 input,
-#search_section p {
+.tab-content p {
   font-size: 1.0em;
 }
 
@@ -54,8 +54,38 @@ button:active {
 }
 
 .song-album-cover {
-  max-width: 20vw;
-  margin-left: .2em
+  max-width: 25vw;
+  margin-left: .8em;
+  margin-top: .8em;
+}
+
+.audio {
+  float:right;
+}
+
+#itunes {
+  margin-top: 0px;
+  font-size: .8em;
+  margin-left: .4em;
+}
+
+.audio audio{
+  margin-top: .8em;
+  margin-right: .8em;
+  display: block;
+  width: 12em;
+}
+
+.artist {
+  font-size: 1.5em;
+  margin-top: .8em;
+  margin-right: 1em;
+}
+
+.song-details {
+  font-size: 2em;
+  margin-left: .8em;
+  margin-top: .8em;
 }
 
 .authors img {
