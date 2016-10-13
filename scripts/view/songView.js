@@ -7,9 +7,6 @@
 
   // Handle search input
   var search = function() {
-    // disable search button to prevent multiple clicks while searching
-    document.getElementById('search_now').disabled=true;
-    document.getElementById('search_now').textContent = 'Wait ...';
     // we need to grab the name from input, if entered
     var userName = $('#search_section input:first-of-type').val();
     if (userName) {
@@ -27,11 +24,15 @@
       // also set the input name to the equivalent field on the mixtape view.
       $('#mixtape input').val(userName);
     };
-
-    // call AJAX
     var inputLyrics = $('#search_section input:last-of-type').val();
-    inputLyrics = encodeURI(inputLyrics);
-    lyrics.request(inputLyrics, musicData.getArtistData, lyricsView.renderSongs);
+    if (inputLyrics) {
+      // disable search button to prevent multiple clicks while searching
+      document.getElementById('search_now').disabled=true;
+      document.getElementById('search_now').textContent = 'Wait ...';
+      // call AJAX
+      inputLyrics = encodeURI(inputLyrics);
+      lyrics.request(inputLyrics, musicData.getArtistData, lyricsView.renderSongs);
+    };
   };
 
   // handle input events if user clicks or presses enter.
