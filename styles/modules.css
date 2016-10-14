@@ -28,14 +28,6 @@ input {
   display: none;
 }
 
-#button-div {
-  text-align: center;
-}
-
-#reset-button {
-  display: none;
-}
-
 button {
   color: inherit;
   background-color: #fff;
@@ -79,12 +71,13 @@ button:active {
   margin-top: .8em;
   margin-bottom: .8em;
 }
+
 .audio {
   margin-left: .8em;
   margin-bottom: .8em;
 }
 
-audio{
+audio {
   width: 12em;
 }
 
@@ -130,7 +123,7 @@ a.artist:hover{
   .authors img {
     max-width: 90%;
   }
-  
+
   #itunes {
     margin-top: 0px;
   }
@@ -182,12 +175,15 @@ a.artist:hover{
   .authors img {
     max-width: 15vw;
   }
+
   .audio {
     margin-left: 2.8em;
   }
+
   .song-album-cover {
     max-height: 20vw;
   }
+  
   .song-details {
     font-size: 1em;
   }
