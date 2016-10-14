@@ -4,6 +4,7 @@
 
   musicData.allItunes = [];
 
+//Function to retrieve data from the Itunes API using the search terms from the genius API and push into musicData.allItunes
   musicData.getArtistData = function(renderSongs){
     for(var i = 0; i < lyrics.allSongs.length; i++){
       var endpoint = encodeURI(lyrics.allSongs[i].primary_artist.name + '+' + lyrics.allSongs[i].title + '&limit=1');
@@ -20,6 +21,7 @@
     };
   };
 
+//This function matches the two data sets from Genius(lyrics) and iTunes(musicData), and inserts the songplay and bio into the main array(lyrics.allsongs).
   musicData.useItunesData = function(){
     musicData.allItunes.forEach(function(element){
       if (element.results.length){

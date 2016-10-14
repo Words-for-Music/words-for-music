@@ -28,6 +28,14 @@ input {
   display: none;
 }
 
+#button-div {
+  text-align: center;
+}
+
+#reset-button {
+  display: none;
+}
+
 button {
   color: inherit;
   background-color: #fff;
