@@ -17,7 +17,15 @@ input,
 
 input {
   width: 75vw;
-  margin: 0 auto;
+  margin: 0.2em auto;
+}
+
+.button-div {
+  text-align: center;
+}
+
+#reset-button {
+  display: none;
 }
 
 #button-div {
@@ -122,6 +130,7 @@ a.artist:hover{
   .authors img {
     max-width: 90%;
   }
+  
   #itunes {
     margin-top: 0px;
   }

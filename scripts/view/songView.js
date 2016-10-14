@@ -16,8 +16,6 @@
           // Our data is already in localStorage, Retrieve it
           var storedData = JSON.parse(localStorage.getItem(storeKey));
           // clear prior data from list
-          // console.log('clearing prior data from list');
-          // mixtape.mixList = [];
           mixtapeView.loadPlaylist(storedData);
         };
       };
@@ -43,6 +41,15 @@
     }
   });
 
+  // handle reset button
+  $('#reset-button').on('click', function() {
+    mixtape.mixList = [];
+    $('#song_display').empty();
+    $('input').val('');
+    $('#search_now').text('Search').prop('disabled', false);
+    $('#reset-button').css('display', 'none');
+  });
+
   // this will render the set of Songs using the template.
   lyricsView.renderSongs = function() {
     // only render if we have songs, otherwise display message.
@@ -55,6 +62,7 @@
       $('#song_display').text('No songs returned from search. Please try again.');
     };
     $('#search_now').text('Search').prop('disabled', false);
+    $('#reset-button').css('display', 'inline-block');
   };
 
   module.lyricsView = lyricsView;
