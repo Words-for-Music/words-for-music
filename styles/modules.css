@@ -20,6 +20,14 @@ input {
   margin: 0 auto;
 }
 
+#button-div {
+  text-align: center;
+}
+
+#reset-button {
+  display: none;
+}
+
 button {
   color: inherit;
   background-color: #fff;
@@ -92,6 +100,11 @@ a.artist:hover{
 .authors img {
   width: 200px;
   max-width: 100%;
+}
+
+.authors,
+.authors img {
+  border-radius: 3px;
 }
 
 /***** Media Queries *****/

@@ -13,7 +13,7 @@
     <!-- Handlebar templates -->
     <script id="songs-template" type="type/x-handlebars-template">
       <details>
-        <summary><strong>Title: {{title}}   by Artist: {{primary_artist.name}}</strong><span class="button-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
+        <summary>Title: <strong>{{title}}</strong> by Artist: <strong>{{primary_artist.name}}</strong><span class="button-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
         <div class="song-dtls-wrapper">
           <img class="song-album-cover" src="{{header_image_url}}" alt="" />
           <section class="audio">
@@ -48,9 +48,12 @@
       </header>
       <main>
         <section id="search_section" class="tab-content">
-          <input type="text" name="user_name" placeholder="Your Name Here">
+          <input type="text" name="user_name" placeholder="Optionally, a Playlist name here">
           <input type="text" name="Search" placeholder="Put yer lyrics right here" />
-          <button id="search_now" type="submit">Search</button>
+          <div id="button-div">
+            <button id="search_now" type="submit">Search</button>
+            <button id="reset-button" type="button">Reset</button>
+          </div>
           <p>
             Here's what ya do, see: Type a snippet of lyrics into the search box, then click 'Search' and we'll find songs that include those lyrics!
           </p>
@@ -61,13 +64,13 @@
 
         <section id="mixtape" class="tab-content">
           <div>
-            <input type="text" name="your_name" placeholder="Your Name Here">
-            <button type="button" name="get_list" class="retrieve_playlist">Get List</button>
+            <input type="text" name="your_name" placeholder="Playlist Name Here, needed if you save">
+            <button type="button" name="get_list" id="retrieve_playlist">Get List</button>
           </div>
             <ul>
               <p>Here's where your rad mixtape will live! Go ahead and add some songs, ya weirdo!</p>
             </ul>
-            <button type="submit" name="save" class="save_playlist">Save</button>
+            <button type="submit" name="save" id="save_playlist">Save</button>
         </section>
         <section id="about" class="tab-content">
           <div class="authors">
