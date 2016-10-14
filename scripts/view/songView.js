@@ -7,22 +7,23 @@
 
   // Handle search input
   var search = function() {
-    // we need to grab the name from input, if entered
+    // we need to grab the playlist name from input, if entered
     var userName = $('#search_section input:first-of-type').val();
     if (userName) {
       if (mixtape.mixList.length === 0) {
         var storeKey = userName.toUpperCase() + '_playlist';
         if (localStorage.getItem(storeKey)) {
-          // Our data is already in localStorage, Retrieve it
+          // Our data is already in localStorage, retrieve it
           var storedData = JSON.parse(localStorage.getItem(storeKey));
           // clear prior data from list
           mixtapeView.loadPlaylist(storedData);
         };
       };
-      // also set the input name to the equivalent field on the mixtape view.
+      // also set the input playlist name to the equivalent field on the mixtape view.
       $('#mixtape input').val(userName);
     };
     var inputLyrics = $('#search_section input:last-of-type').val();
+    // make sure we don't search if nothing was entered in the search field.
     if (inputLyrics) {
       // disable search button to prevent multiple clicks while searching
       document.getElementById('search_now').disabled=true;
@@ -50,7 +51,7 @@
     $('#reset-button').css('display', 'none');
   });
 
-  // this will render the set of Songs using the template.
+  // this will render the set of Songs returned using the template.
   lyricsView.renderSongs = function() {
     // only render if we have songs, otherwise display message.
     $('#search_section p').empty();

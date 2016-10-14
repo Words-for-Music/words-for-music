@@ -18,7 +18,7 @@
     }).done(function(returnedData) {
       if (returnedData.response.hits.length) {
         returnedData.response.hits.forEach(function(tune) {
-          // get the actual song data searched for
+          // stash the actual song data searched for
           return lyrics.allSongs.push(tune.result);
         });
       };
@@ -28,7 +28,6 @@
       alert('ERROR in search call.');
     });
   };
-
 
   module.lyrics = lyrics;
 

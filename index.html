@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="icon" type="image/x-icon" href="images/mic_notes.png">
-    <!-- Handlebar templates -->
+
+    <!-- Handlebar templates start-->
     <script id="songs-template" type="type/x-handlebars-template">
       <details>
         <summary>Title: <strong>{{title}}</strong> by Artist: <strong>{{primary_artist.name}}</strong><span class="button-span">add to mixtape <button class="add-button" data-song="{{full_title}}">+</button></span></summary>
@@ -33,6 +34,7 @@
     <script id="mixtape-template" type="type/x-handlebars-template">
       <li></span><strong>{{full_title}}</strong><span class="button-span">remove <button class="minus-button" data-song="{{full_title}}">-</button></span></li>
     </script>
+    <!-- Handlebar templates  end -->
 
   </head>
   <body>
@@ -72,6 +74,7 @@
             </ul>
             <button type="submit" name="save" id="save_playlist">Save</button>
         </section>
+
         <section id="about" class="tab-content">
           <div class="authors">
             <img src="images/Niilo.jpg"/>
@@ -89,8 +92,8 @@
             <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This is really a check on your powers of observation. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Did you notice this english text buried in the stupid Latin stuff? Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. It makes both hard to read. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. At least us Latin-speaking people think so. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Thanks for your time!
             </p>
             <ul class="author-links">
-              <li><a href="" target="_blank">Github</a></li>
-              <li><a href="" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/jpgothro" target="_blank">Github</a></li>
+              <li><a href="https://www.linkedin.com/in/john-gothro" target="_blank">LinkedIn</a></li>
             </ul>
           </div>
           <div class="authors">
@@ -106,7 +109,7 @@
       </main>
       <footer>
         <ul>
-          <li>Cool huh</li>
+          <li>Cool, huh</li>
           <li>powered by Tommy's Lil' Sluggers &copy;2016</li>
         </ul>
       </footer>
