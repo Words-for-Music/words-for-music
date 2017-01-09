@@ -50,9 +50,9 @@
       </header>
       <main>
         <section id="search_section" class="tab-content">
-
-          <input type="text" name="user_name" placeholder="Optionally, a Playlist name here" />
-          <input type="text" name="Search" placeholder="Put yer lyrics right here" />
+          
+          <input type="text" name="user_name" placeholder="Playlist name (optional)" />
+          <input type="text" name="Search" autofocus="autofocus" placeholder="Search for lyrics" />
           <div class="button-div">
             <button id="search_now" type="submit">Search</button>
             <button id="reset-button" type="button">Reset</button>
@@ -67,7 +67,7 @@
 
         <section id="mixtape" class="tab-content">
           <div class="button-div">
-            <input type="text" name="your_name" placeholder="Playlist Name Here, needed if you save">
+            <input type="text" name="your_name" placeholder="Enter a playlist name to save">
             <button type="button" name="get_list" id="retrieve_playlist">Get List</button>
           </div>
             <ul>
@@ -80,7 +80,7 @@
           <div class="authors">
             <img src="images/Niilo.jpg"/>
             <h2>Niilo Smeds</h2>
-            <p>Niilo received a Ph.D. in Timmel Studies from the J.P. Gothro Institute for Acute Opprobrium. He has built several authoritatively janky static sites and enjoys splicing arrays. With respect to DocOps, he is primarily interested in iterating toward an agile-integrated continuous publication workflow.
+            <p>Niilo is a full-stack JavaScript developer based in Portland with a background in music and concert lighting design. He has a B.A. in English (Creative Writing emphasis) from San Francisco State University.
             </p>
             <ul class="author-links">
               <li><a href="https://github.com/nsmeds" target="_blank">Github</a></li>
@@ -110,8 +110,8 @@
       </main>
       <footer>
         <ul>
-          <li>Cool, huh</li>
-          <li>powered by Tommy's Lil' Sluggers &copy;2016</li>
+          <li>Powered by the <a href="https://docs.genius.com">Genius API</a></li>
+          <li>&copy;2016 <a href="/about">Tommy's Lil' Sluggers</a></li>
         </ul>
       </footer>
       <script type="text/javascript" src="vendor/scripts/jquery.min.js"></script>
