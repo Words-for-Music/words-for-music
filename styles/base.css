@@ -5,8 +5,10 @@ body {
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
-  background: #FFDF80;
-  color: #111;
+  background: #333;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  color: white;
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
@@ -20,10 +22,6 @@ details {
   border-radius: 3px;
   padding-left: 0.2em;
   padding-right: 0.2em;
-}
-
-#song_display {
-  background-color: FF9F80;
 }
 
 header,
@@ -40,17 +38,19 @@ a:hover {
   opacity: 0.5;
 }
 
-a:visited {
-  color: inherit;
+main a,
+footer a {
+  color: hsla(200, 100%, 93%, 0.9);
 }
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 nav ul {
   display: flex;
-  padding: 0 0 0.3em 0;
+  padding: 0 0 0.5em 0;
 }
 nav ul,
 nav ul li {
