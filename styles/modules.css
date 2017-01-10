@@ -29,7 +29,7 @@ input {
 }
 
 button {
-  color: inherit;
+  color: #333;
   background-color: #fff;
   border-radius: 3px;
   font-size: 0.9em;
@@ -57,7 +57,7 @@ button:active {
 }
 
 #song_display details[open] {
-  background-color: #FFC105;
+  background-color: hsla(40, 50%, 25%, 0.5);
   border: 1px solid #000000;
 }
 .song-dtls-wrapper {
@@ -87,7 +87,7 @@ audio {
 }
 
 .artist {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 a.artist:hover{
@@ -106,6 +106,7 @@ a.artist:hover{
 .authors,
 .authors img {
   border-radius: 3px;
+  font-weight: 300;
 }
 
 /***** Media Queries *****/
@@ -116,8 +117,8 @@ a.artist:hover{
 
   .authors {
     flex: 1;
-    border: 1px solid black;
-    padding: 0.2em;
+    border: 1px solid #333;
+    padding: 0.5em;
   }
 
   .authors img {
@@ -132,9 +133,6 @@ a.artist:hover{
     width: 16em;
   }
 
-  .artist {
-    font-size: 1.5em;
-  }
 }
 
 @media only screen and (min-width: 720px) {
@@ -194,9 +192,5 @@ a.artist:hover{
 
   audio{
     width: 21em;
-  }
-
-  .artist {
-    font-size: 1.5em;
   }
 }
