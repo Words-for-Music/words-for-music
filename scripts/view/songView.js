@@ -14,6 +14,9 @@
         var storeKey = userName.toUpperCase() + '_playlist';
         if (localStorage.getItem(storeKey)) {
           // Our data is already in localStorage, retrieve it
+          //you may still want to wrap your JSON.parse call in a try/catch in case
+          //somehow something got stored on localStorage that wasn't undefined but
+          //also wasn't valid JSON
           var storedData = JSON.parse(localStorage.getItem(storeKey));
           // clear prior data from list
           mixtapeView.loadPlaylist(storedData);
@@ -37,6 +40,9 @@
   // handle input events if user clicks or presses enter.
   $('#search_now').on('click', search);
   $('input').keyup(function(e) {
+    //nice idea! You may also want to prevent default. It could be fine here without
+    //it but keep in mind that in a lot of cases HTML elements are already listening
+    //for enter
     if(e.keyCode === 13) {
       search();
     }

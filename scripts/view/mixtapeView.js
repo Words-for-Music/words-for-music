@@ -48,6 +48,10 @@
         // Create a nifty 'Playlist Saved' overlay
         var overlay = document.createElement('h5');
         overlay.id = 'overlay';
+        //for CSS this complex you're probably better off creating a class
+        //and having jQuery set that class to the node rather than setting
+        //it outright like this. That way your styling and logic are as
+        //seperate as possible.
         $(overlay).hide().appendTo($('main'))
         .css({'font-size' : '5em',
               'text-align' : 'center',
@@ -79,6 +83,10 @@
         mixtapeView.loadPlaylist(storedData);
         loadName(playlistName);
       } else {
+        //at this point you have the capabilities to display this
+        //message somewhere as something other than an alert
+        //so you may want to consider doing that as it generally
+        //makes for a better UI
         alert('No playlist by that name found');
       };
     } else {
